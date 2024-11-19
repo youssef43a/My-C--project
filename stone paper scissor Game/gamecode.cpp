@@ -83,7 +83,7 @@ void ft_PrintResoultOfRound(st_PlayersChoices PlayersChoices, int countNbrRound,
   
     }
     else if(ft_SelectWiner(PlayersChoices) == en_Winer::Player) {
-        system ("color 2F"); //change color to red in windows System
+        system ("color 2F"); //change color to green in windows System
         cout << "\033[42;37m";// change color to green and text to white in linix or mac OS system
         PlayerWonTimes++;
         cout << "________________Round [" << countNbrRound+1 << "]________________\n\n";
@@ -93,7 +93,7 @@ void ft_PrintResoultOfRound(st_PlayersChoices PlayersChoices, int countNbrRound,
 
     }
     else {
-        system ("color 4E"); //change color to red in windows System
+        system ("color 4E"); //change color to yellow in windows System
         cout << "\033[43;37m";// change color to yellow and text to white in linix or mac OS system
         cout << "________________Round [" << countNbrRound+1 << "]________________\n\n";
         cout << "Player1 choice : " << ft_convertNumberToChoice(PlayersChoices.Player) << endl;
@@ -152,7 +152,6 @@ void ft_startGame() {
         cin >> PlayAgain;
         system ("color");//set color of background to default on windows system
         cout << "\033[0m";// set color of background to default on lunix system
-        if (PlayAgain == 'N' || PlayAgain == 'n') break;
     }
 }
 
